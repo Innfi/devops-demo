@@ -1,5 +1,6 @@
 resource "aws_security_group" "DemoSecurityGroupBastion" {
     name = "DemoSGBastion"
+    vpc_id = aws_vpc.DemoVPC.id
 
     ingress {
         description = "ssh"

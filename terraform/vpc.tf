@@ -3,6 +3,6 @@ resource "aws_vpc" "DemoVPC" {
     instance_tenancy = "default" 
     enable_dns_hostnames = true
     tags = {
-        Name = "demo_vpc"
+        Name = "Demo VPC"
     }
 }

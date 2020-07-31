@@ -6,11 +6,11 @@ resource "aws_eip" "DemoEIP" {
     }
 }
 
-resource "aws_nat_gateway" "DemoNATGateway" {
+resource "aws_nat_gateway" "DemoNATGatewayA" {
     allocation_id = aws_eip.DemoEIP.id
-    subnet_id = aws_subnet.DemoSubnetPublic-A.id
+    subnet_id = aws_subnet.DemoSubnetPublicA.id
 
     tags = {
-        Name = "Demo nat gateway"
+        Name = "Demo nat gateway public a"
     }
 }

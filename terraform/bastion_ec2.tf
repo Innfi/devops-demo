@@ -3,7 +3,7 @@ resource "aws_instance" "DemoEC2Bastion" {
     instance_type = "t2.micro" 
     key_name = var.key_pair
 
-    subnet_id = aws_subnet.DemoSubnetPublic-A.id
+    subnet_id = aws_subnet.DemoSubnetBastion.id
     associate_public_ip_address = true
 
     tags = {
