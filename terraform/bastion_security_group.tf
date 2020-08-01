@@ -18,7 +18,7 @@ resource "aws_security_group" "DemoSecurityGroupBastion" {
     }
 
     tags = {
-        Name = "Demo security group for bastion hosts"
+        Name = "Demo Security Group for Bastion Hosts"
     }
 }
 

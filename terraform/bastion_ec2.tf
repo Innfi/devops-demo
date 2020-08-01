@@ -3,10 +3,13 @@ resource "aws_instance" "DemoEC2Bastion" {
     instance_type = "t2.micro" 
     key_name = var.key_pair
 
-    subnet_id = aws_subnet.DemoSubnetBastion.id
+    subnet_id = aws_subnet.DemoSubnetPublicA.id
     associate_public_ip_address = true
+    vpc_security_group_ids = [
+        aws_security_group.DemoSecurityGroupBastion.id
+    ]
 
     tags = {
-        Name = "Demo ec2 bastion instances"
+        Name = "Demo EC2 Bastion Instance"
     }
 }

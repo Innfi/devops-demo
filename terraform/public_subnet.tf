@@ -1,30 +1,21 @@
-resource "aws_subnet" "DemoSubnetBastion" {
-    cidr_block = "10.10.100.0/24" 
-    vpc_id = aws_vpc.DemoVPC.id 
-    availability_zone = "ap-northeast-2a"
-
-    map_public_ip_on_launch = true
-    tags = {
-        Name = "Demo subnet for bastion instances"
-    }
-}
-
 resource "aws_subnet" "DemoSubnetPublicA" {
-    cidr_block = "10.10.0.0/24" 
+    cidr_block = "10.0.1.0/24" 
     vpc_id = aws_vpc.DemoVPC.id 
     availability_zone = "ap-northeast-2a"
+    map_public_ip_on_launch = true
 
     tags = {
-        Name = "Demo subnet public a"
+        Name = "Demo Subnet PublicA"
     }
 }
 
-resource "aws_subnet" "DemoSubnetPublicB" {
-    cidr_block = "10.10.5.0/24" 
+resource "aws_subnet" "DemoSubnetPublicC" {
+    cidr_block = "10.0.2.0/24" 
     vpc_id = aws_vpc.DemoVPC.id 
-    availability_zone = "ap-northeast-2b"
+    availability_zone = "ap-northeast-2c"
+    map_public_ip_on_launch = true
 
     tags = {
-        Name = "Demo subnet public b"
+        Name = "Demo Subnet PublicC"
     }
 }
