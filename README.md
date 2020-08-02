@@ -11,6 +11,8 @@ The goal of this repo is to implement a 3-tier architecture with load balancing.
 * A VPC with a /16 ip address range
 * An internet gateway
 * 2 public subnets for web instances
+* 2 ec2 web instances on public subnets
+* 2 NAT gateway on public subnets
 * 2 private subnets for WAS instances 
 * 2 private db subnets for DBs
 * Security groups for private / public subnets 
