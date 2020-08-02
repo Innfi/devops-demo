@@ -51,7 +51,7 @@ variable "vpc_private_db_subnets" {
 variable "ec2_ami_web" {
     description = "ec2 ami id for web instances"
     type = string
-    default = "ami-08f35ff5d5c07e955"
+    default = "(your ami id for ec2 web instances)"
 }
 
 variable "ec2_type_web" {
@@ -63,7 +63,7 @@ variable "ec2_type_web" {
 variable "key_pair" {
     description = "ec2 key pair"
     type = string
-    default = "InnfisKey"
+    default = "(your key pair for ec2 web instances)"
 }
 
 variable "port_http" {
@@ -90,11 +90,11 @@ variable "vpc_tags" {
 variable "bastion_key_pair" {
     description = "ec2 key pair for bastion instances"
     type = string
-    default = "InnfisKey"
+    default = "(your key pair for bastion instances)"
 }
 
 variable "bastion_cidr_blocks" {
     description = "cidr blocks for bastion instances"
     type = list
-    default = ["124.5.226.230/32"]
+    default = ["your cidr blocks for bastion instances"]
 }
